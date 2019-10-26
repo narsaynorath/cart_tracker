@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Keyboard, SafeAreaView, StyleSheet, ScrollView, Text, View} from 'react-native';
 
-import Total from './Total';
-import Header from './Header';
-import NewProductArea from './NewProductArea';
-import CartList from './CartList';
+import Total from './components/Total';
+import Header from './components/Header';
+import NewProductArea from './components/NewProductArea';
+import CartList from './components/CartList';
 
 export default App = () => {
   const [products, setProducts] = useState([]);
