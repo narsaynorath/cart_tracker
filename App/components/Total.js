@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  Text,
-} from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text } from 'react-native';
 
 export default Total = props => (
   <KeyboardAvoidingView style={styles.totalFooter}>

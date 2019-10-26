@@ -1,5 +1,12 @@
-import React, {useState} from 'react';
-import {Keyboard, SafeAreaView, StyleSheet, ScrollView, Text, View} from 'react-native';
+import React, { useState } from 'react';
+import {
+  Keyboard,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 
 import Total from './components/Total';
 import Header from './components/Header';
@@ -14,11 +21,11 @@ export default App = () => {
   const addProduct = () => {
     setProducts(products => [
       ...products,
-      {name: newProductName, price: parseFloat(newProductPrice) || 0},
+      { name: newProductName, price: parseFloat(newProductPrice) || 0 },
     ]);
     setNewProductName('');
     setNewProductPrice('');
-    Keyboard.dismiss()
+    Keyboard.dismiss();
   };
 
   const removeProduct = index => {

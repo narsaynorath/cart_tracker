@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "storybook": "start-storybook -p 7007"
+    "storybook": "start-storybook -p 7007",
+    "prettier": "prettier --write \"App/**/*.js\""
   },
   "dependencies": {
     "react": "16.8.1",

@@ -13,7 +13,8 @@ export default ProductEntry = props => (
     <Text style={styles.priceField}>{props.price.toFixed(2)}</Text>
     <TouchableOpacity
       style={styles.deleteButton}
-      onPress={() => props.onProductRemove()}>
+      onPress={() => props.onProductRemove()}
+    >
       <Text style={styles.deleteButtonText}>-</Text>
     </TouchableOpacity>
   </View>
@@ -45,6 +46,6 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   deleteButtonText: {
-    height: 20
-  }
+    height: 20,
+  },
 });
