@@ -6,7 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 7007"
   },
   "dependencies": {
     "react": "16.8.1",
@@ -17,10 +18,17 @@
     "@babel/core": "^7.5.0",
     "@babel/runtime": "^7.5.0",
     "@react-native-community/eslint-config": "^0.0.3",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react-native": "^5.2.5",
+    "@storybook/react-native-server": "^5.2.5",
     "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.6",
     "jest": "^24.1.0",
     "metro-react-native-babel-preset": "^0.51.1",
     "prettier": "^1.18.2",
+    "react-dom": "16.8.1",
     "react-test-renderer": "16.8.1"
   },
   "jest": {
