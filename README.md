@@ -5,8 +5,8 @@ realize that you've gone way over budget? __Fear no more!__
 Have people ever told you the best way to stay within your budget is to carry a calculator
 with you when shopping, but you're always afraid of making a mistake? __Fear no more!__
 
-This mobile application aims to provide you with a reasonable estimate of the total in
-your shopping cart so you can control your spending *before* the point of no return 💸
+This iOS app aims to provide you with a reasonable estimate of the total in your shopping cart
+so you can control your spending *before* the point of no return 💸
 
 # How to run this project locally
 1. `git clone` the project
