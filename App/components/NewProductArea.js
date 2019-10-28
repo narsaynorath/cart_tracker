@@ -7,6 +7,8 @@ import {
   View,
 } from 'react-native';
 
+import ActionButton from './_common/ActionButton';
+
 export default NewProductArea = props => (
   <View behavior="padding" style={styles.addArea}>
     <TextInput
@@ -22,9 +24,7 @@ export default NewProductArea = props => (
       keyboardType="decimal-pad"
       onChangeText={price => props.onPriceChange(price)}
     />
-    <TouchableOpacity style={styles.addButton} onPress={props.onProductAdd}>
-      <Text>+</Text>
-    </TouchableOpacity>
+    <ActionButton type="create" onPress={props.onProductAdd} />
   </View>
 );
 
@@ -43,12 +43,5 @@ const styles = StyleSheet.create({
   },
   priceField: {
     flex: 1,
-  },
-  addButton: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'lightgreen',
-    borderRadius: 100,
   },
 });
