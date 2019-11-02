@@ -7,16 +7,13 @@ import {
   View,
 } from 'react-native';
 
+import ActionButton from './_common/ActionButton';
+
 export default ProductEntry = props => (
   <View behavior="padding" style={styles.addArea}>
     <Text style={styles.itemField}>{props.name}</Text>
     <Text style={styles.priceField}>{props.price.toFixed(2)}</Text>
-    <TouchableOpacity
-      style={styles.deleteButton}
-      onPress={() => props.onProductRemove()}
-    >
-      <Text style={styles.deleteButtonText}>-</Text>
-    </TouchableOpacity>
+    <ActionButton type="delete" onPress={props.onProductRemove} />
   </View>
 );
 
@@ -36,16 +33,5 @@ const styles = StyleSheet.create({
   },
   priceField: {
     flex: 1,
-  },
-  deleteButton: {
-    height: '100%',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'red',
-    borderRadius: 100,
-  },
-  deleteButtonText: {
-    height: 20,
   },
 });
