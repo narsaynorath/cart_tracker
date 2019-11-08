@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Appbar } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
 
-export default Header = props => (
-  <View style={styles.header}>
-    <Text style={styles.headerText}>{props.headerText}</Text>
-  </View>
+export default Header = ({ headerText, subtitleText }) => (
+  <Appbar.Header style={styles.header}>
+    <Appbar.Content title={headerText} subtitle={subtitleText} />
+  </Appbar.Header>
 );
 
 const styles = StyleSheet.create({
@@ -13,7 +14,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 70,
     width: '100%',
-    backgroundColor: 'orange',
     borderBottomWidth: 1,
     borderBottomColor: 'lightgrey',
   },

@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-import {
-  Keyboard,
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+import { Keyboard, StyleSheet, Text, View } from 'react-native';
 
 import Total from './components/Total';
 import Header from './components/Header';
-import NewProductArea from './components/NewProductArea';
+import NewProductInput from './components/NewProductInput';
 import CartList from './components/CartList';
 
 export default App = () => {
@@ -35,10 +28,13 @@ export default App = () => {
   const cartTotal = products.reduce((acc, p) => p.price + acc, 0);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Header headerText={'Cart Tracker'} />
+    <View style={styles.container}>
+      <Header
+        headerText={'Cart Tracker'}
+        subtitleText={'Track all the things!'}
+      />
 
-      <NewProductArea
+      <NewProductInput
         name={newProductName}
         price={newProductPrice}
         onNameChange={val => setNewProductName(val)}
@@ -51,15 +47,14 @@ export default App = () => {
         onProductRemove={index => removeProduct(index)}
       />
 
-      <Total total={cartTotal.toFixed(2)} />
-    </SafeAreaView>
+      <Total tax={1.13} total={cartTotal} />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

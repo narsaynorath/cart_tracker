@@ -9,29 +9,34 @@ import {
 
 import ActionButton from './_common/ActionButton';
 
-export default NewProductArea = props => (
+export default NewProductInput = ({
+  name,
+  onNameChange,
+  price,
+  onPriceChange,
+  onProductAdd,
+}) => (
   <View behavior="padding" style={styles.addArea}>
     <TextInput
       placeholder="Product Name"
-      value={props.name}
+      value={name}
       style={styles.itemField}
-      onChangeText={name => props.onNameChange(name)}
+      onChangeText={name => onNameChange(name)}
     />
     <TextInput
       placeholder="Price"
-      value={props.price}
+      value={price}
       style={styles.priceField}
       keyboardType="decimal-pad"
-      onChangeText={price => props.onPriceChange(price)}
+      onChangeText={price => onPriceChange(price)}
     />
-    <ActionButton type="create" onPress={props.onProductAdd} />
+    <ActionButton type="create" onPress={onProductAdd} />
   </View>
 );
 
 const styles = StyleSheet.create({
   addArea: {
     width: '100%',
-    height: 50,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     padding: 10,

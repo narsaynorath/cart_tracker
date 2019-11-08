@@ -1,20 +1,18 @@
 import React from 'react';
 import { FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Divider } from 'react-native-paper';
 
 import ProductEntry from './ProductEntry';
 import EmptyState from './EmptyState';
 
-export default CartList = props => (
+export default CartList = ({ products, onProductRemove }) => (
   <FlatList
-    style={styles.listArea}
-    data={props.products}
+    data={products}
+    scrollEnabled={!!products.length}
     renderItem={({ item, index }) => (
-      <ProductEntry
-        {...item}
-        onProductRemove={() => props.onProductRemove(index)}
-      />
+      <ProductEntry {...item} onProductRemove={() => onProductRemove(index)} />
     )}
-    extraData={props.products.length}
+    extraData={products.length}
     keyExtractor={(item, index) => `${index}`}
     ListEmptyComponent={
       <EmptyState
@@ -22,17 +20,13 @@ export default CartList = props => (
         text="Hey! Looks like your cart is empty!"
       />
     }
+    ItemSeparatorComponent={Divider}
     contentContainerStyle={styles.emptyStateContainer}
   />
 );
 
 const styles = StyleSheet.create({
   emptyStateContainer: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  listArea: {
-    flex: 1,
-    width: '100%',
+    flexGrow: 1,
   },
 });

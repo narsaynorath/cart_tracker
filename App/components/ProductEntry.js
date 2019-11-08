@@ -9,24 +9,24 @@ import {
 
 import ActionButton from './_common/ActionButton';
 
-export default ProductEntry = props => (
-  <View behavior="padding" style={styles.addArea}>
-    <Text style={styles.itemField}>{props.name}</Text>
-    <Text style={styles.priceField}>{props.price.toFixed(2)}</Text>
-    <ActionButton type="delete" onPress={props.onProductRemove} />
+export default ProductEntry = ({ name, price, onProductRemove }) => (
+  <View behavior="padding" style={styles.productArea}>
+    <Text style={styles.itemField} numberOfLines={1}>
+      {name}
+    </Text>
+    <Text style={styles.priceField}>{price.toFixed(2)}</Text>
+    <ActionButton type="delete" onPress={onProductRemove} />
   </View>
 );
 
 const styles = StyleSheet.create({
-  addArea: {
+  productArea: {
     width: '100%',
     height: 50,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
     padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
   },
   itemField: {
     flex: 3,

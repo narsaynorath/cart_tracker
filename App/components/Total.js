@@ -1,18 +1,20 @@
 import React from 'react';
-import { KeyboardAvoidingView, StyleSheet, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, Text } from 'react-native';
 
-export default Total = props => (
-  <KeyboardAvoidingView style={styles.totalFooter}>
-    <Text>{`Total: $${props.total}`}</Text>
-  </KeyboardAvoidingView>
+export default Total = ({ total, tax }) => (
+  <SafeAreaView style={styles.totalFooter}>
+    <Text>{`Subtotal: $${total.toFixed(2)}`}</Text>
+    <Text>{`Total: $${(total * tax).toFixed(2)}`}</Text>
+  </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
   totalFooter: {
+    flexDirection: 'row',
     backgroundColor: 'lightgrey',
     width: '100%',
     height: 50,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
 });
