@@ -17,6 +17,7 @@ module.exports = {
         devDependencies: ['__tests__/**', 'storybook/**', 'src/stories/**'],
       },
     ],
+    'global-require': 'off', // Auto-generated storyLoader.js uses require
   },
   globals: {
     fetch: false,

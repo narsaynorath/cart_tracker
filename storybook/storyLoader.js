@@ -4,9 +4,9 @@
 // https://github.com/elderfo/react-native-storybook-loader.git
 
 function loadStories() {
-  require('../src/stories/Button.story'); // eslint-disable-line global-require
-  require('../src/stories/NewProductInput.story'); // eslint-disable-line global-require
-  require('../src/stories/ProductEntry.story'); // eslint-disable-line global-require
+  require('../src/stories/Button.story');
+  require('../src/stories/NewProductInput.story');
+  require('../src/stories/ProductEntry.story');
 }
 
 const stories = [
