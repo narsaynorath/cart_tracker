@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 import ActionButton from './_common/ActionButton';
 
-export default NewProductInput = ({
+const NewProductInput = ({
   name,
   onNameChange,
   price,
@@ -21,14 +15,14 @@ export default NewProductInput = ({
       placeholder="Product Name"
       value={name}
       style={styles.itemField}
-      onChangeText={name => onNameChange(name)}
+      onChangeText={newName => onNameChange(newName)}
     />
     <TextInput
       placeholder="Price"
       value={price}
       style={styles.priceField}
       keyboardType="decimal-pad"
-      onChangeText={price => onPriceChange(price)}
+      onChangeText={newPrice => onPriceChange(newPrice)}
     />
     <ActionButton type="create" onPress={onProductAdd} />
   </View>
@@ -50,3 +44,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+export default NewProductInput;

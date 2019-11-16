@@ -1,10 +1,8 @@
 import React from 'react';
-import { storiesOf, addDecorator } from '@storybook/react-native';
+import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 
 import ActionButton from '../components/_common/ActionButton';
-
-import { Text, View } from 'react-native';
 
 storiesOf('ActionButton', module)
   .add('create', () => (

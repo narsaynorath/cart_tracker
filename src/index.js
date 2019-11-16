@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { Keyboard, StyleSheet, Text, View } from 'react-native';
+import { Keyboard, StyleSheet, View } from 'react-native';
 
 import Total from './components/Total';
 import Header from './components/Header';
 import NewProductInput from './components/NewProductInput';
 import CartList from './components/CartList';
 
-export default App = () => {
+const App = () => {
   const [products, setProducts] = useState([]);
   const [newProductName, setNewProductName] = useState('');
   const [newProductPrice, setNewProductPrice] = useState('');
 
   const addProduct = () => {
-    setProducts(products => [
+    setProducts(() => [
       ...products,
       { name: newProductName, price: parseFloat(newProductPrice) || 0 },
     ]);
@@ -22,17 +22,14 @@ export default App = () => {
   };
 
   const removeProduct = index => {
-    setProducts(products => products.filter((p, i) => i !== index));
+    setProducts(() => products.filter((p, i) => i !== index));
   };
 
   const cartTotal = products.reduce((acc, p) => p.price + acc, 0);
 
   return (
     <View style={styles.container}>
-      <Header
-        headerText={'Cart Tracker'}
-        subtitleText={'Track all the things!'}
-      />
+      <Header headerText="Cart Tracker" subtitleText="Track all the things!" />
 
       <NewProductInput
         name={newProductName}
@@ -59,3 +56,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;

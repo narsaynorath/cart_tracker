@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text } from 'react-native';
 
-export default Total = ({ total, tax }) => (
+const Total = ({ total, tax }) => (
   <SafeAreaView style={styles.totalFooter}>
     <Text>{`Subtotal: $${total.toFixed(2)}`}</Text>
     <Text>{`Total: $${(total * tax).toFixed(2)}`}</Text>
@@ -18,3 +18,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
 });
+
+export default Total;

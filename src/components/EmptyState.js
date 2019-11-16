@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default EmptyState = props => (
+const EmptyState = ({ iconName, text }) => (
   <View style={styles.container}>
-    <Icon style={styles.iconStyle} size={50} name={props.iconName} />
-    <Text>{props.text}</Text>
+    <Icon style={styles.iconStyle} size={50} name={iconName} />
+    <Text>{text}</Text>
   </View>
 );
 
@@ -21,3 +21,5 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
+
+export default EmptyState;

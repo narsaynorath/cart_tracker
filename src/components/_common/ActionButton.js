@@ -1,11 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { FAB } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import colors from '../../config/colors';
 
-export default ActionButton = props => {
+const ActionButton = props => {
   const { onPress, type } = props;
   const backgroundColor = colors[type];
   let iconName;
@@ -17,9 +15,13 @@ export default ActionButton = props => {
     case 'delete':
       iconName = 'minus';
       break;
+    default:
+      iconName = 'help-rrhombus';
   }
 
   return (
     <FAB small icon={iconName} onPress={onPress} style={{ backgroundColor }} />
   );
 };
+
+export default ActionButton;

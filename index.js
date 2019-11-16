@@ -4,11 +4,11 @@
 
 import React from 'react';
 import { AppRegistry } from 'react-native';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
 // import Storybook from './storybook';
-import App from './App';
-import colors from './App/config/colors';
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import App from './src';
+import colors from './src/config/colors';
 import { name as appName } from './app.json';
 
 const theme = {
@@ -21,7 +21,7 @@ const theme = {
   },
 };
 
-export default Main = () => (
+const Main = () => (
   <PaperProvider theme={theme}>
     <App />
   </PaperProvider>

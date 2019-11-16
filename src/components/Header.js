@@ -2,7 +2,7 @@ import React from 'react';
 import { Appbar } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-export default Header = ({ headerText, subtitleText }) => (
+const Header = ({ headerText, subtitleText }) => (
   <Appbar.Header style={styles.header}>
     <Appbar.Content title={headerText} subtitle={subtitleText} />
   </Appbar.Header>
@@ -21,3 +21,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default Header;

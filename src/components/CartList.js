@@ -1,11 +1,11 @@
 import React from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import { Divider } from 'react-native-paper';
 
 import ProductEntry from './ProductEntry';
 import EmptyState from './EmptyState';
 
-export default CartList = ({ products, onProductRemove }) => (
+const CartList = ({ products, onProductRemove }) => (
   <FlatList
     data={products}
     scrollEnabled={!!products.length}
@@ -30,3 +30,5 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
+
+export default CartList;

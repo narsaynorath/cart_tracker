@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import ActionButton from './_common/ActionButton';
 
-export default ProductEntry = ({ name, price, onProductRemove }) => (
+const ProductEntry = ({ name, price, onProductRemove }) => (
   <View behavior="padding" style={styles.productArea}>
     <Text style={styles.itemField} numberOfLines={1}>
       {name}
@@ -35,3 +29,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+export default ProductEntry;
