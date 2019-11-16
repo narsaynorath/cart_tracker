@@ -31,6 +31,7 @@ I began this project with the goal of exploring new development ideas and techno
 I've decided to use **React Native** as the primary framework along with modern
 tools such as:
 
+- **ESLint** for code quality
 - **Prettier** for code consistency
 - **Storybook** for visual TDD
 
